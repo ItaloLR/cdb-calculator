@@ -1,63 +1,70 @@
 # Cálculo de CDB - B3
 
 
+## Configurações para o projeto
+- Angular 17.2.1: (https://www.npmjs.com/package/@angular/cli/v/17.2.1)
+- .NET SDK 8.0.2: (https://dotnet.microsoft.com/pt-br/download)
+
 ## Tecnologias Utilizadas
-- Angular 13.0.4
-- .NET 8.0.100-preview.5.23303.2
+- Angular
+- C#
+- TypeScript
+- Sass
 
 ## Instalação
 Clone este repositório: 
 ```bash
-  git clone https://github.com/KleberRibeiro89/b3.git
-  cd .\b3\
+  git clone https://github.com/ItaloLR/cdb-calculator.git
+
+  cd cdb-calculator
 ```
+
+## Observação Importante
+Para que o frontend possa funcionar, executar o cálculo do CDB, assim como os testes, é preciso primeiro executar a API no backend. O frontend está consumindo a API. 
+
+## Frontend
 
 Instale as dependências do Angular: 
 ```bash
-  cd .\b3-front\
-  npm install --ignore-scripts 
+  cd .\frontend\
+
+  npm install 
 ```
 
-
-Instale as dependências do .NET, estando na pasta principal rodar os comandos: 
+Para executar o projeto Angular:
 ```bash
-  cd .\webApi\B3.Api\
+  cd  .\frontend\
+
+  ng serve 
+```
+
+Rode os testes do Angular: 
+```bash
+  cd .\frontend\
+
+  ng test
+```
+
+## Backend 
+
+Instale as dependências do .NET, rodando os seguintes comandos: 
+```bash
+  cd .\backend\B3.Api\
+
   dotnet restore 
   dotnet build 
 ```
 
-Rode os testes do .NET, estando na pasta principal rodar os comandos: 
+Para executar o projeto .NET:
 ```bash
-  cd .\webApi\B3.Domain.Test\
-  dotnet test --collect:"Code Coverage"
-```
+  cd .\backend\B3.Api\
 
-Rode os testes do angular, estando na pasta principal rodar os comandos: : 
-```bash
-  cd .\b3-front\
-  ng test --code-coverage
-```
-
-Para executar o projeto .NET voltar a pasta principal do projeto e rodar os comandos:
-```bash
-  cd .\webApi\B3.Api\
   dotnet watch run 
 ```
 
-Para executar o projeto Angular voltar a pasta principal do projeto e rodar os comandos:
+Rode os testes do .NET, com os seguintes comandos: 
 ```bash
-  cd  .\b3-front\
-  ng serve 
+  cd .\backend\B3.Domain.Test\
+
+  dotnet test --collect:"Code Coverage"
 ```
-
-
-## Testes
-Para visualizar a cobertura de testes do backend existe um arquivo
-```bash
-  cd  .\coveragereport\index.html
-```
-
-
-## Acessar o projeto
-Para acessar basta clicar no link
-[Cálculo CDB](https://localhost:4200/).
