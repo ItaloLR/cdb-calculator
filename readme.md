@@ -68,3 +68,10 @@ Rode os testes do .NET, com os seguintes comandos:
 
   dotnet test --collect:"Code Coverage"
 ```
+
+## Testes
+
+- Frontend
+  Caso o teste falhe inicialmente, favor rodar o teste novamente, isso se deve ao tempo de execução do Karma, alguns testes podem falhar. Mas conforme a imagem, todos os testes foram aprovados, sem erros!
+  ![coverageKarma](https://github.com/ItaloLR/cdb-calculator/assets/29109541/b76a6a1d-dfe4-4105-aacf-fa9f4bb362e0)
+
